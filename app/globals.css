@@ -154,7 +154,6 @@ figure {
 }
 
 .header-cta {
-  justify-self: end;
   padding: 10px 0 9px;
   border-bottom: 1px solid var(--ink);
   font-size: 12px;
@@ -163,21 +162,47 @@ figure {
   text-transform: uppercase;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  gap: 24px;
+}
+
+.header-github {
+  padding: 11px 14px 10px;
+  border: 1px solid var(--ink);
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: background 180ms ease, color 180ms ease;
+}
+
+.header-github:hover,
+.header-github:focus-visible {
+  background: var(--ink);
+  color: var(--white);
+}
+
 .mobile-nav {
   display: none;
 }
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(500px, 1.1fr);
-  gap: clamp(56px, 8vw, 128px);
-  align-items: center;
-  min-height: calc(100svh - 88px);
-  padding-block: 72px 78px;
+  grid-template-columns: minmax(0, 1.05fr) minmax(440px, 0.95fr);
+  gap: clamp(48px, 7vw, 108px);
+  align-items: stretch;
+  min-height: 720px;
+  padding-block: 76px 86px;
 }
 
 .hero-copy {
+  display: flex;
   max-width: 710px;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .eyebrow {
@@ -200,10 +225,10 @@ figure {
 .hero h1 {
   margin-top: 36px;
   font-family: var(--serif);
-  font-size: clamp(60px, 6.25vw, 102px);
+  font-size: clamp(56px, 5.6vw, 88px);
   font-weight: 400;
   letter-spacing: -0.055em;
-  line-height: 0.9;
+  line-height: 0.95;
 }
 
 .hero h1 em {
@@ -222,8 +247,17 @@ figure {
 .hero-actions {
   display: flex;
   align-items: center;
-  gap: 32px;
+  flex-wrap: wrap;
+  gap: 12px 14px;
   margin-top: 40px;
+}
+
+.hero-actions .button {
+  min-height: 48px;
+}
+
+.hero-actions .text-link {
+  margin-left: 6px;
 }
 
 .button {
@@ -418,6 +452,132 @@ figure {
   font-size: 12px;
   letter-spacing: 0.1em;
   writing-mode: vertical-rl;
+}
+
+.publication-register {
+  align-self: center;
+  border: 1px solid var(--ink);
+  background: var(--white);
+}
+
+.register-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 18px 22px;
+  border-bottom: 1px solid var(--ink);
+  background: var(--ink);
+  color: var(--white);
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.register-heading strong {
+  color: #e58a83;
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.publication-register article {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 20px;
+  padding: 26px 22px;
+  border-bottom: 1px solid var(--line);
+}
+
+.register-index {
+  color: var(--red);
+  font-family: var(--serif);
+  font-size: 18px;
+}
+
+.register-venue {
+  color: var(--red);
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.publication-register h2 {
+  margin-top: 11px;
+  font-family: var(--serif);
+  font-size: clamp(23px, 2vw, 31px);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.12;
+}
+
+.publication-register article div > p:not(.register-venue) {
+  margin-top: 13px;
+  color: var(--ink-soft);
+  font-size: 10px;
+  letter-spacing: 0.03em;
+}
+
+.publication-register article a {
+  display: inline-flex;
+  gap: 10px;
+  margin-top: 16px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid var(--ink);
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.register-github {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 22px;
+  background: var(--paper-deep);
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.research-register {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  background: var(--white);
+}
+
+.research-register > div {
+  display: flex;
+  min-height: 116px;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px max(24px, calc((100vw - 1420px) / 8));
+  border-right: 1px solid var(--line);
+}
+
+.research-register > div:last-child {
+  border-right: 0;
+}
+
+.research-register span {
+  color: var(--red);
+  font-size: 8px;
+  font-weight: 750;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.research-register strong {
+  max-width: 250px;
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.25;
 }
 
 .signal-strip {
@@ -627,8 +787,9 @@ figure {
 
 .publications-section {
   padding-block: 120px;
-  background: var(--ink);
-  color: var(--white);
+  border-top: 1px solid var(--ink);
+  background: var(--white);
+  color: var(--ink);
 }
 
 .section-kicker.light {
@@ -655,11 +816,11 @@ figure {
 }
 
 .publication-intro > p {
-  color: rgba(255, 253, 248, 0.64);
+  color: var(--ink-soft);
 }
 
 .publication {
-  border-top: 1px solid rgba(255, 253, 248, 0.24);
+  border-top: 1px solid var(--ink);
 }
 
 .publication + .publication {
@@ -672,7 +833,7 @@ figure {
   gap: 24px;
   align-items: center;
   padding-block: 18px;
-  color: rgba(255, 253, 248, 0.64);
+  color: var(--ink-soft);
   font-size: 9px;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -694,7 +855,8 @@ figure {
   display: grid;
   grid-template-columns: minmax(0, 0.82fr) minmax(430px, 1.18fr);
   min-height: 610px;
-  border: 1px solid rgba(255, 253, 248, 0.22);
+  border: 1px solid var(--line);
+  background: #faf8f2;
 }
 
 .publication-copy {
@@ -705,7 +867,7 @@ figure {
 }
 
 .pub-type {
-  color: #db7770;
+  color: var(--red);
   font-size: 9px;
   font-weight: 750;
   letter-spacing: 0.12em;
@@ -715,7 +877,7 @@ figure {
 .publication-copy h3 {
   margin-top: 30px;
   font-family: var(--serif);
-  font-size: clamp(34px, 3.4vw, 54px);
+  font-size: clamp(32px, 3vw, 48px);
   font-weight: 400;
   letter-spacing: -0.04em;
   line-height: 1.04;
@@ -723,7 +885,7 @@ figure {
 
 .authors {
   margin-top: 26px;
-  color: rgba(255, 253, 248, 0.76);
+  color: var(--ink);
   font-size: 12px;
   font-weight: 650;
   letter-spacing: 0.02em;
@@ -731,13 +893,32 @@ figure {
 
 .abstract {
   margin: 30px 0 36px;
-  color: rgba(255, 253, 248, 0.62);
+  color: var(--ink-soft);
   font-size: 14px;
   line-height: 1.72;
 }
 
 .publication-copy .button {
   margin-top: auto;
+}
+
+.citation-line {
+  margin-top: 10px;
+  color: var(--red);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 0.02em;
+}
+
+.publication-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.publication-actions .button {
+  margin-top: 0;
 }
 
 .publication-figure {
@@ -749,8 +930,8 @@ figure {
   justify-content: center;
   overflow: hidden;
   padding: clamp(24px, 4vw, 56px) clamp(18px, 3vw, 40px) 0;
-  border-left: 1px solid rgba(255, 253, 248, 0.22);
-  background: #d8d3c7;
+  border-left: 1px solid var(--line);
+  background: var(--paper-deep);
 }
 
 .publication-figure img {
@@ -781,7 +962,7 @@ figure {
 }
 
 .publication-secondary .publication-meta {
-  color: rgba(255, 253, 248, 0.64);
+  color: var(--ink-soft);
 }
 
 .publication-secondary .publication-figure {
@@ -1182,7 +1363,7 @@ footer {
   }
 
   .desktop-nav,
-  .header-cta {
+  .header-actions {
     display: none;
   }
 
@@ -1237,6 +1418,10 @@ footer {
     max-width: 850px;
   }
 
+  .publication-register {
+    width: 100%;
+  }
+
   .hero h1 {
     font-size: clamp(66px, 10vw, 104px);
   }
@@ -1248,6 +1433,18 @@ footer {
 
   .signal-strip {
     grid-template-columns: 220px 1fr;
+  }
+
+  .research-register {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .research-register > div:nth-child(2) {
+    border-right: 0;
+  }
+
+  .research-register > div:nth-child(-n + 2) {
+    border-bottom: 1px solid var(--line);
   }
 
   .signal-mark {
@@ -1330,6 +1527,21 @@ footer {
     flex-direction: column;
   }
 
+  .hero-actions .text-link {
+    margin: 10px 0 0;
+  }
+
+  .publication-register article {
+    grid-template-columns: 32px 1fr;
+    gap: 12px;
+    padding: 22px 16px;
+  }
+
+  .register-heading,
+  .register-github {
+    padding-inline: 16px;
+  }
+
   .hero-art {
     min-height: 0;
     margin-left: 0;
@@ -1385,6 +1597,22 @@ footer {
     padding: 20px 0 0;
     border-top: 1px solid rgba(255, 255, 255, 0.34);
     border-left: 0;
+  }
+
+  .research-register {
+    grid-template-columns: 1fr;
+  }
+
+  .research-register > div,
+  .research-register > div:nth-child(2) {
+    min-height: 96px;
+    padding: 18px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .research-register > div:last-child {
+    border-bottom: 0;
   }
 
   .research-section,
@@ -1458,6 +1686,15 @@ footer {
 
   .publication-copy {
     padding: 34px 24px 42px;
+  }
+
+  .publication-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .publication-actions .button {
+    width: 100%;
   }
 
   .publication-copy h3 {

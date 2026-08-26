@@ -42,9 +42,14 @@ export default function Home() {
           <a href="#people">People</a>
         </nav>
 
-        <a className="header-cta" href="mailto:nimol.thn@gmail.com">
-          Collaborate <span aria-hidden="true">↗</span>
-        </a>
+        <div className="header-actions">
+          <a className="header-github" href={githubUrl} target="_blank" rel="noreferrer">
+            GitHub <span aria-hidden="true">↗</span>
+          </a>
+          <a className="header-cta" href="mailto:nimol.thn@gmail.com">
+            Collaborate <span aria-hidden="true">↗</span>
+          </a>
+        </div>
 
         <details className="mobile-nav">
           <summary aria-label="Open navigation">Menu</summary>
@@ -53,6 +58,7 @@ export default function Home() {
             <a href="#publications">Publications</a>
             <a href="#benchmark">Benchmark</a>
             <a href="#people">People</a>
+            <a href={githubUrl} target="_blank" rel="noreferrer">GitHub ↗</a>
             <a href="mailto:nimol.thn@gmail.com">Collaborate</a>
           </nav>
         </details>
@@ -61,13 +67,11 @@ export default function Home() {
       <section className="hero section-shell" aria-labelledby="hero-title">
         <div className="hero-copy">
           <p className="eyebrow">
-            <span>Research initiative</span>
+            <span>Angkorian–AI Project</span>
             <span>Jan 2026 — Present</span>
           </p>
           <h1 id="hero-title">
-            Reading stone.
-            <br />
-            <em>Preserving knowledge.</em>
+            Computational research for <em>Khmer stone heritage.</em>
           </h1>
           <p className="hero-intro">
             Angkorian–AI advances computer vision for Khmer stone heritage—
@@ -75,48 +79,52 @@ export default function Home() {
             for inscription analysis and visual condition assessment.
           </p>
           <div className="hero-actions">
-            <a className="button button-dark" href="#publications">
-              Explore our research <span aria-hidden="true">↓</span>
+            <a className="button button-dark" href={springerUrl} target="_blank" rel="noreferrer">
+              ICDAR 2026 paper <span aria-hidden="true">↗</span>
             </a>
-            <a className="text-link" href={springerUrl} target="_blank" rel="noreferrer">
-              Latest paper <span aria-hidden="true">↗</span>
+            <a className="button button-outline" href={heritageUrl} target="_blank" rel="noreferrer">
+              ICPR 2026 paper <span aria-hidden="true">↗</span>
+            </a>
+            <a className="text-link" href={githubUrl} target="_blank" rel="noreferrer">
+              GitHub repository <span aria-hidden="true">↗</span>
             </a>
           </div>
         </div>
 
-        <div className="hero-art" aria-label="Khmer stone inscription research imagery">
-          <figure className="hero-image-frame">
-            <img
-              src="/research/ksi-domain-gap.jpg"
-              alt="Comparison of Khmer stone inscriptions, palm-leaf manuscripts, and modern handwriting"
-              width="2723"
-              height="737"
-            />
-            <figcaption>
-              <span>01 / KSI</span>
-              <span>Carved text under real degradation</span>
-            </figcaption>
-          </figure>
-          <div className="hero-note">
-            <span className="crosshair" aria-hidden="true" />
-            <p>First multi-task benchmark for Khmer stone inscription analysis.</p>
-            <strong>ICDAR 2026</strong>
+        <aside className="publication-register" aria-label="2026 publication record">
+          <div className="register-heading">
+            <span>Publication record</span>
+            <strong>2026</strong>
           </div>
-          <div className="hero-index" aria-hidden="true">A–26</div>
-        </div>
+          <article>
+            <span className="register-index">01</span>
+            <div>
+              <p className="register-venue">ICDAR 2026 · Vienna, Austria</p>
+              <h2>Angkorian-KSI: A Multi-task Benchmark for Khmer Stone Inscription Analysis</h2>
+              <p>N. Thuon · J. Du · R. Thuon · P. Theang</p>
+              <a href={springerUrl} target="_blank" rel="noreferrer">Open paper <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          <article>
+            <span className="register-index">02</span>
+            <div>
+              <p className="register-venue">ICPR 2026 · Lyon, France</p>
+              <h2>Angkorian-HeritageObj: AI-Assisted Visual Condition Assessment</h2>
+              <p>N. Thuon · P. Theang</p>
+              <a href={heritageUrl} target="_blank" rel="noreferrer">Open paper <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          <a className="register-github" href={githubUrl} target="_blank" rel="noreferrer">
+            View Angkorian–AI on GitHub <span aria-hidden="true">↗</span>
+          </a>
+        </aside>
       </section>
 
-      <section className="signal-strip" aria-label="Project overview">
-        <div>
-          <span className="signal-number">02</span>
-          <span className="signal-label">peer-reviewed papers in 2026</span>
-        </div>
-        <p>
-          From epigraphic records to material condition, the project builds
-          technical systems around the realities of Khmer stone—not generic
-          document or object assumptions.
-        </p>
-        <span className="signal-mark" aria-hidden="true">ខ្មែរ</span>
+      <section className="research-register" aria-label="Project overview">
+        <div><span>Field</span><strong>Computer vision &amp; document analysis</strong></div>
+        <div><span>Domain</span><strong>Khmer stone heritage</strong></div>
+        <div><span>Research outputs</span><strong>2 conference papers · 2026</strong></div>
+        <div><span>Primary region</span><strong>Angkor, Cambodia</strong></div>
       </section>
 
       <section className="research-section section-shell" id="research">
@@ -190,23 +198,23 @@ export default function Home() {
 
       <section className="publications-section" id="publications">
         <div className="section-shell">
-          <div className="section-kicker light">
+          <div className="section-kicker">
             <p className="eyebrow">Selected publications / 02</p>
-            <p className="section-note">Peer-reviewed work · 2026</p>
+            <p className="section-note">Conference proceedings · 2026</p>
           </div>
           <div className="publication-intro">
-            <h2>Research outputs.</h2>
+            <h2>Peer-reviewed publications.</h2>
             <p>
-              Benchmarks and methods designed to make Khmer heritage visible
-              within document analysis, pattern recognition, and digital
-              humanities research.
+              Two complementary studies establish the project’s research
+              agenda across historical document analysis and visual condition
+              assessment.
             </p>
           </div>
 
           <article className="publication publication-featured">
             <div className="publication-meta">
               <span className="pub-index">01</span>
-              <span>ICDAR 2026 · Vienna, Austria</span>
+              <span>Paper · ICDAR 2026 (Vienna, Austria)</span>
               <span>LNCS 16974 · pp. 387–404</span>
             </div>
             <div className="publication-body">
@@ -219,6 +227,7 @@ export default function Home() {
                 <p className="authors">
                   Nimol Thuon · Jun Du · Ranysakol Thuon · Panhapin Theang
                 </p>
+                <p className="citation-line">DOI: 10.1007/978-3-032-36039-7_23</p>
                 <p className="abstract">
                   The first benchmark dedicated to automated digital analysis
                   of Khmer stone inscriptions, spanning structural detection,
@@ -226,9 +235,14 @@ export default function Home() {
                   Baselines expose a pronounced domain gap created by erosion,
                   relief shading, complex stone texture, and linguistic variation.
                 </p>
-                <a className="button button-light" href={springerUrl} target="_blank" rel="noreferrer">
-                  Read on Springer <span aria-hidden="true">↗</span>
-                </a>
+                <div className="publication-actions">
+                  <a className="button button-dark" href={springerUrl} target="_blank" rel="noreferrer">
+                    Read ICDAR paper <span aria-hidden="true">↗</span>
+                  </a>
+                  <a className="button button-outline" href={githubUrl} target="_blank" rel="noreferrer">
+                    GitHub <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
               </div>
               <figure className="publication-figure">
                 <img
@@ -246,8 +260,8 @@ export default function Home() {
           <article className="publication publication-secondary">
             <div className="publication-meta">
               <span className="pub-index">02</span>
-              <span>ICPR–PRESTIGE 2026 · Lyon, France</span>
-              <span>Pattern recognition for cultural heritage</span>
+              <span>Paper · ICPR 2026 (Lyon, France)</span>
+              <span>PRESTIGE Workshop · Cultural Heritage</span>
             </div>
             <div className="publication-body">
               <div className="publication-copy">
@@ -257,15 +271,21 @@ export default function Home() {
                   Assessment of Khmer Stone Heritage Objects
                 </h3>
                 <p className="authors">Nimol Thuon · Panhapin Theang</p>
+                <p className="citation-line">ICPR–PRESTIGE Workshop · August 2026</p>
                 <p className="abstract">
                   A preservation-oriented study of AI-assisted visual condition
                   assessment for Khmer stone objects, evaluating modern vision
                   architectures against damage severity, surface degradation,
                   and demanding field-capture conditions.
                 </p>
-                <a className="button button-outline" href={heritageUrl} target="_blank" rel="noreferrer">
-                  View publication <span aria-hidden="true">↗</span>
-                </a>
+                <div className="publication-actions">
+                  <a className="button button-dark" href={heritageUrl} target="_blank" rel="noreferrer">
+                    Read ICPR paper <span aria-hidden="true">↗</span>
+                  </a>
+                  <a className="button button-outline" href={githubUrl} target="_blank" rel="noreferrer">
+                    GitHub <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
               </div>
               <figure className="publication-figure heritage-figure">
                 <img

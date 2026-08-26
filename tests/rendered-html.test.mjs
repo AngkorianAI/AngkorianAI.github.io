@@ -30,9 +30,12 @@ test("server-renders the Angkorian-AI research site", async () => {
 
   const html = await response.text();
   assert.match(html, /<title>Angkorian–AI \| Khmer Heritage Intelligence<\/title>/i);
-  assert.match(html, /Reading stone\./);
+  assert.match(html, /Computational research for/);
   assert.match(html, /Angkorian-KSI: A Multi-task Benchmark/);
   assert.match(html, /Angkorian-HeritageObj: AI-Assisted Visual Condition/);
+  assert.match(html, /ICDAR 2026 \(Vienna, Austria\)/);
+  assert.match(html, /ICPR 2026 \(Lyon, France\)/);
+  assert.match(html, /GitHub repository/);
   assert.match(html, />3,493</);
   assert.match(html, /href="#publications"/);
   assert.match(html, /og\.png/);

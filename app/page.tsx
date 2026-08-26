@@ -432,7 +432,21 @@ export default function Home() {
           </div>
           <article className="lead-profile">
             <div className="lead-identity">
-              <span className="lead-monogram" aria-hidden="true">NT</span>
+              <a
+                className="lead-portrait"
+                href="https://github.com/back-kh"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="View Dr. Nimol Thuon on GitHub"
+              >
+                <img
+                  src="/profile/nimol-thuon.jpg"
+                  alt="Portrait of Dr. Nimol Thuon"
+                  width="460"
+                  height="460"
+                  loading="lazy"
+                />
+              </a>
               <div>
                 <h3>Dr. Nimol Thuon</h3>
                 <p>Project Director · Research Scientist</p>

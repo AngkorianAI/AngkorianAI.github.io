@@ -660,7 +660,7 @@ figure {
 .benchmark-copy h2,
 .method-title h2,
 .evidence-heading h2,
-.people-layout h2,
+.leadership-heading h2,
 .contact-copy h2 {
   font-family: var(--serif);
   font-size: clamp(46px, 5vw, 78px);
@@ -1185,69 +1185,149 @@ figure {
   color: #db7770;
 }
 
-.people-layout {
+.leadership-layout {
   display: grid;
-  grid-template-columns: minmax(320px, 0.78fr) minmax(0, 1.22fr);
+  grid-template-columns: minmax(320px, 0.72fr) minmax(0, 1.28fr);
   gap: 9vw;
   padding-top: 66px;
 }
 
-.people-intro {
-  max-width: 570px;
-  margin-top: 28px;
-}
-
-.institution-list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-top: 42px;
-}
-
-.institution-list span {
-  color: var(--ink-soft);
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.09em;
+.leadership-label {
+  color: var(--red);
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
 }
 
-.team-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-self: start;
-  border-top: 1px solid var(--ink);
-  border-left: 1px solid var(--line);
+.leadership-heading h2 {
+  margin-top: 22px;
 }
 
-.team-list article {
-  display: grid;
-  grid-template-columns: 34px 1fr;
-  gap: 14px;
-  min-height: 145px;
-  padding: 24px;
-  border-right: 1px solid var(--line);
+.leadership-heading > p:last-child {
+  max-width: 570px;
+  margin-top: 28px;
+  color: var(--ink-soft);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.lead-profile {
+  align-self: start;
+  padding: 38px 0 0;
+  border-top: 2px solid var(--ink);
   border-bottom: 1px solid var(--line);
 }
 
-.team-list article > span {
-  color: var(--red);
-  font-family: var(--serif);
-  font-size: 15px;
+.lead-identity {
+  display: grid;
+  grid-template-columns: 76px 1fr;
+  gap: 24px;
+  align-items: center;
 }
 
-.team-list h3 {
+.lead-monogram {
+  display: grid;
+  width: 76px;
+  height: 76px;
+  place-items: center;
+  background: var(--red);
+  color: var(--white);
   font-family: var(--serif);
-  font-size: 25px;
+  font-size: 27px;
+}
+
+.lead-identity h3 {
+  font-family: var(--serif);
+  font-size: clamp(31px, 3vw, 44px);
   font-weight: 400;
-  line-height: 1.1;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
 }
 
-.team-list p {
+.lead-identity p {
   margin-top: 8px;
+  color: var(--red);
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.lead-bio {
+  max-width: 790px;
+  margin-top: 34px;
   color: var(--ink-soft);
-  font-size: 11px;
-  line-height: 1.45;
+  font-family: var(--serif);
+  font-size: clamp(19px, 1.7vw, 25px);
+  line-height: 1.55;
+}
+
+.lead-focus {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 38px;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.lead-focus span {
+  min-height: 72px;
+  padding: 19px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.partner-block {
+  margin-top: 104px;
+  padding-top: 28px;
+  border-top: 1px solid var(--ink);
+}
+
+.partner-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.partner-heading > span {
+  color: var(--ink-soft);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+
+.partner-logo-wall {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  margin-top: 28px;
+  padding: 1px;
+  background: var(--line);
+}
+
+.partner-logo {
+  display: grid;
+  min-width: 0;
+  min-height: 190px;
+  place-items: center;
+  padding: 28px;
+  background: var(--white);
+}
+
+.partner-logo img {
+  width: 100%;
+  height: 125px;
+  object-fit: contain;
+}
+
+.partner-logo-wide img {
+  height: 118px;
 }
 
 .contact-section {
@@ -1465,6 +1545,10 @@ footer {
     border-top-color: #c7bca9;
   }
 
+  .partner-logo-wall {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .contact-section {
     grid-template-columns: 0.7fr 1fr;
   }
@@ -1643,7 +1727,7 @@ footer {
   .benchmark-copy h2,
   .method-title h2,
   .evidence-heading h2,
-  .people-layout h2,
+  .leadership-heading h2,
   .contact-copy h2 {
     font-size: clamp(42px, 13vw, 64px);
   }
@@ -1651,9 +1735,45 @@ footer {
   .track-grid,
   .benchmark-shell,
   .method-layout,
-  .people-layout,
+  .leadership-layout,
   .contact-section {
     grid-template-columns: 1fr;
+  }
+
+  .leadership-layout {
+    gap: 52px;
+  }
+
+  .lead-profile {
+    padding-top: 28px;
+  }
+
+  .lead-focus {
+    grid-template-columns: 1fr;
+  }
+
+  .partner-block {
+    margin-top: 76px;
+  }
+
+  .partner-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .partner-logo-wall {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .partner-logo {
+    min-height: 150px;
+    padding: 20px;
+  }
+
+  .partner-logo img,
+  .partner-logo-wide img {
+    height: 100px;
   }
 
   .track-visual {
@@ -1721,7 +1841,7 @@ footer {
   }
 
   .method-layout,
-  .people-layout {
+  .leadership-layout {
     gap: 52px;
   }
 
@@ -1743,10 +1863,6 @@ footer {
 
   .evidence-grid .evidence-wide {
     grid-column: auto;
-  }
-
-  .team-list {
-    grid-template-columns: 1fr;
   }
 
   .contact-stone {

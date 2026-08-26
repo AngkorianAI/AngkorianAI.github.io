@@ -12,15 +12,6 @@ const metrics = [
   ["534", "script-period labels"],
 ] as const;
 
-const team = [
-  ["Nimol Thuon", "Project lead · Methodology"],
-  ["Jun Du", "Principal investigator"],
-  ["Ranysakol Thuon", "Data validation"],
-  ["Panhapin Theang", "Data preparation · Annotations"],
-  ["Cheam Darith", "Khmer epigraphy"],
-  ["Wang Zhangrui", "Methodology · Experiments"],
-] as const;
-
 export default function Home() {
   return (
     <main id="top">
@@ -427,30 +418,56 @@ export default function Home() {
 
       <section className="people-section section-shell" id="people">
         <div className="section-kicker">
-          <p className="eyebrow">Research network / 05</p>
-          <p className="section-note">Computer vision · Epigraphy · Heritage documentation</p>
+          <p className="eyebrow">Project leadership / 05</p>
+          <p className="section-note">Applied AI · Historical analysis · Low-resource languages</p>
         </div>
-        <div className="people-layout">
-          <div>
-            <h2>Built across disciplines and borders.</h2>
-            <p className="people-intro">
-              Angkorian–AI brings technical research into dialogue with Khmer
-              language, material culture, field evidence, and preservation practice.
+        <div className="leadership-layout">
+          <div className="leadership-heading">
+            <p className="leadership-label">Project lead</p>
+            <h2>Led by Dr. Nimol Thuon.</h2>
+            <p>
+              Research at the intersection of artificial intelligence,
+              historical documents, writing systems, and cultural heritage.
             </p>
-            <div className="institution-list" aria-label="Collaborating institutions">
-              <span>NERC–SLIP · China</span>
-              <span>Université Paris Cité · France</span>
-              <span>Paragon International University · Cambodia</span>
-              <span>Angkor National Museum · Cambodia</span>
-            </div>
           </div>
-          <div className="team-list">
-            {team.map(([name, role], index) => (
-              <article key={name}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <div><h3>{name}</h3><p>{role}</p></div>
-              </article>
-            ))}
+          <article className="lead-profile">
+            <div className="lead-identity">
+              <span className="lead-monogram" aria-hidden="true">NT</span>
+              <div>
+                <h3>Dr. Nimol Thuon</h3>
+                <p>Project Director · Research Scientist</p>
+              </div>
+            </div>
+            <p className="lead-bio">
+              Dr. Nimol Thuon is a research scientist specializing in applied
+              AI for historical analysis and low-resource languages. For more
+              than a decade, his research has examined multi-script palm-leaf
+              manuscripts across South and Southeast Asia, covering 8–10
+              writing systems and a broad range of low-resource Asian languages.
+              He now leads Angkorian–AI, advancing computational analysis of
+              Khmer stone inscriptions and heritage objects for preservation,
+              documentation, and long-term cultural research.
+            </p>
+            <div className="lead-focus" aria-label="Research focus">
+              <span>10+ years of research</span>
+              <span>8–10 writing systems</span>
+              <span>South &amp; Southeast Asia</span>
+              <span>Khmer heritage preservation</span>
+            </div>
+          </article>
+        </div>
+
+        <div className="partner-block">
+          <div className="partner-heading">
+            <p className="eyebrow">Partners &amp; supporters</p>
+            <span>Institutional partnership and research support</span>
+          </div>
+          <div className="partner-logo-wall" aria-label="Partner and supporting institutions">
+            <div className="partner-logo"><img src="/partners/nerc-slip.webp" alt="NERC-SLIP" width="360" height="360" loading="lazy" /></div>
+            <div className="partner-logo"><img src="/partners/chinese-academy-sciences.webp" alt="Chinese Academy of Sciences" width="355" height="360" loading="lazy" /></div>
+            <div className="partner-logo partner-logo-wide"><img src="/partners/unesco-twas.webp" alt="UNESCO-TWAS" loading="lazy" /></div>
+            <div className="partner-logo"><img src="/partners/universite-paris-cite.webp" alt="Université Paris Cité" loading="lazy" /></div>
+            <div className="partner-logo"><img src="/partners/ustc.webp" alt="University of Science and Technology of China" width="360" height="360" loading="lazy" /></div>
           </div>
         </div>
       </section>

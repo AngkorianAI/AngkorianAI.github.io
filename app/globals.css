@@ -304,8 +304,8 @@ figure {
 
 .hero-art {
   position: relative;
-  min-height: 650px;
-  padding: 46px 46px 72px 0;
+  min-height: 0;
+  padding: 46px 46px 46px 0;
 }
 
 .hero-art::before {
@@ -319,34 +319,31 @@ figure {
 .hero-image-frame {
   position: relative;
   z-index: 1;
-  height: 490px;
+  display: flex;
+  height: auto;
+  flex-direction: column;
   overflow: hidden;
-  background: #6e6352;
+  padding: 20px 20px 14px;
+  background: #25231f;
 }
 
 .hero-image-frame > img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 2% center;
+  height: auto;
+  object-fit: contain;
   filter: sepia(0.24) saturate(0.72) contrast(1.08);
 }
 
 .hero-image-frame::after {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(18, 17, 15, 0.06), transparent 46%, rgba(18, 17, 15, 0.52));
-  content: "";
+  display: none;
 }
 
 .hero-image-frame figcaption {
-  position: absolute;
-  z-index: 2;
-  right: 18px;
-  bottom: 16px;
-  left: 18px;
   display: flex;
   justify-content: space-between;
+  margin-top: 12px;
+  padding-top: 11px;
+  border-top: 1px solid rgba(255, 253, 248, 0.22);
   color: var(--white);
   font-size: 9px;
   font-weight: 700;
@@ -355,15 +352,14 @@ figure {
 }
 
 .hero-note {
-  position: absolute;
+  position: relative;
   z-index: 3;
-  right: 0;
-  bottom: 34px;
   display: grid;
   grid-template-columns: 54px minmax(180px, 290px) auto;
   gap: 18px;
   align-items: center;
   width: min(94%, 590px);
+  margin: 0 0 0 auto;
   padding: 20px 22px;
   border-top: 3px solid var(--red);
   background: var(--white);
@@ -564,29 +560,19 @@ figure {
 }
 
 .track-visual {
-  height: 330px;
+  display: grid;
+  height: clamp(240px, 23vw, 330px);
+  place-items: center;
   overflow: hidden;
+  padding: 20px;
   background: #bbb2a2;
 }
 
 .track-visual img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   filter: saturate(0.72) contrast(1.06);
-  transition: transform 600ms cubic-bezier(0.2, 0.7, 0.2, 1);
-}
-
-.track-card:hover .track-visual img {
-  transform: scale(1.025);
-}
-
-.inscription-crop img {
-  object-position: 13% center;
-}
-
-.heritage-crop img {
-  object-position: center;
 }
 
 .track-copy {
@@ -756,34 +742,35 @@ figure {
 
 .publication-figure {
   position: relative;
+  display: flex;
   min-width: 0;
-  min-height: 610px;
+  min-height: 0;
+  flex-direction: column;
+  justify-content: center;
   overflow: hidden;
+  padding: clamp(24px, 4vw, 56px) clamp(18px, 3vw, 40px) 0;
   border-left: 1px solid rgba(255, 253, 248, 0.22);
   background: #d8d3c7;
 }
 
 .publication-figure img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   filter: saturate(0.62) contrast(1.04);
 }
 
-.publication-featured .publication-figure img {
-  object-position: 54% center;
-}
-
 .publication-figure figcaption {
-  position: absolute;
-  right: 16px;
-  bottom: 16px;
-  padding: 8px 10px;
+  align-self: stretch;
+  margin-top: auto;
+  padding: 13px 0 12px;
+  border-top: 1px solid rgba(24, 24, 22, 0.18);
   background: rgba(24, 24, 22, 0.91);
   color: var(--white);
   font-size: 9px;
   font-weight: 650;
   letter-spacing: 0.1em;
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -804,10 +791,6 @@ figure {
 .publication-secondary .authors,
 .publication-secondary .abstract {
   color: var(--ink-soft);
-}
-
-.heritage-figure img {
-  object-position: 50% 46%;
 }
 
 .benchmark-section {
@@ -890,6 +873,7 @@ figure {
 
 .benchmark-figure img {
   width: 100%;
+  height: auto;
   filter: saturate(0.78);
 }
 
@@ -986,7 +970,9 @@ figure {
 }
 
 .evidence-grid figure {
+  display: flex;
   min-width: 0;
+  flex-direction: column;
   border-top: 1px solid rgba(255, 253, 248, 0.24);
   padding-top: 14px;
 }
@@ -997,14 +983,10 @@ figure {
 
 .evidence-grid img {
   width: 100%;
-  aspect-ratio: 1.7 / 1;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   background: var(--white);
   filter: saturate(0.7);
-}
-
-.evidence-grid .evidence-wide img {
-  aspect-ratio: 2.55 / 1;
 }
 
 .evidence-grid figcaption {
@@ -1260,7 +1242,7 @@ footer {
   }
 
   .hero-art {
-    min-height: 600px;
+    min-height: 0;
     margin-left: 10vw;
   }
 
@@ -1277,7 +1259,7 @@ footer {
   }
 
   .publication-figure {
-    min-height: 480px;
+    min-height: 0;
     border-top: 1px solid rgba(255, 253, 248, 0.22);
     border-left: 0;
   }
@@ -1349,9 +1331,9 @@ footer {
   }
 
   .hero-art {
-    min-height: 440px;
+    min-height: 0;
     margin-left: 0;
-    padding: 24px 18px 74px 0;
+    padding: 24px 18px 24px 0;
   }
 
   .hero-art::before {
@@ -1359,7 +1341,8 @@ footer {
   }
 
   .hero-image-frame {
-    height: 330px;
+    height: auto;
+    padding: 12px 12px 10px;
   }
 
   .hero-note {
@@ -1446,7 +1429,13 @@ footer {
   }
 
   .track-visual {
-    height: 265px;
+    height: auto;
+    min-height: 0;
+    padding: 12px;
+  }
+
+  .track-visual img {
+    height: auto;
   }
 
   .track-copy {
@@ -1476,7 +1465,8 @@ footer {
   }
 
   .publication-figure {
-    min-height: 330px;
+    min-height: 0;
+    padding: 18px 12px 0;
   }
 
   .benchmark-shell {
@@ -1516,11 +1506,6 @@ footer {
 
   .evidence-grid .evidence-wide {
     grid-column: auto;
-  }
-
-  .evidence-grid .evidence-wide img,
-  .evidence-grid img {
-    aspect-ratio: 1.55 / 1;
   }
 
   .team-list {

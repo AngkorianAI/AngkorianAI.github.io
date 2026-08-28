@@ -39,6 +39,8 @@ test("server-renders the Angkorian-AI research site", async () => {
   assert.doesNotMatch(html, /Led by Dr\. Nimol Thuon\./);
   assert.doesNotMatch(html, /Research at the intersection of artificial intelligence/);
   assert.doesNotMatch(html, /class="leadership-heading"/);
+  assert.match(html, /Nimol Thuon, PhD/);
+  assert.match(html, /Dr\. Nimol Thuon is a research scientist/);
   assert.match(html, /more than a decade/);
   assert.match(html, /profile\/nimol-thuon\.jpg/);
   assert.match(html, /href="https:\/\/github\.com\/back-kh"/);
@@ -46,6 +48,10 @@ test("server-renders the Angkorian-AI research site", async () => {
   assert.match(html, /partners\/unesco-twas\.webp/);
   assert.match(html, /research\/angkorian-ai-reading-stone\.webp/);
   assert.doesNotMatch(html, /research\/ksi-domain-gap\.jpg/);
+  assert.ok(
+    html.indexOf("partners/ustc.webp") < html.indexOf("partners/ecole-polytechnique.webp"),
+    "USTC is the first partner logo",
+  );
   assert.match(html, /brand\/angkorian-ai-logo\.webp/);
   assert.match(html, /href="https:\/\/github\.com\/AngkorianAI"/);
   assert.match(html, /href="https:\/\/angkorianai\.github\.io\/"/);

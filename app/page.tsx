@@ -443,7 +443,7 @@ export default function Home() {
                 />
               </a>
               <div>
-                <h3>Dr. Nimol Thuon</h3>
+                <h3>Nimol Thuon, PhD</h3>
                 <p>Project Director · Research Scientist</p>
               </div>
             </div>
@@ -472,8 +472,8 @@ export default function Home() {
             <span>Institutional partnership and research support</span>
           </div>
           <div className="partner-logo-wall" aria-label="Partner and supporting institutions">
-            <div className="partner-logo partner-logo-wide"><img src="/partners/ecole-polytechnique.webp" alt="École Polytechnique and Institut Polytechnique de Paris" width="947" height="365" loading="lazy" /></div>
             <div className="partner-logo"><img src="/partners/ustc.webp" alt="University of Science and Technology of China" width="360" height="360" loading="lazy" /></div>
+            <div className="partner-logo partner-logo-wide"><img src="/partners/ecole-polytechnique.webp" alt="École Polytechnique and Institut Polytechnique de Paris" width="947" height="365" loading="lazy" /></div>
             <div className="partner-logo"><img src="/partners/universite-paris-cite.webp" alt="Université Paris Cité" loading="lazy" /></div>
             <div className="partner-logo partner-logo-wide"><img src="/partners/unesco-twas.webp" alt="UNESCO-TWAS" loading="lazy" /></div>
             <div className="partner-logo"><img src="/partners/chinese-academy-sciences.webp" alt="Chinese Academy of Sciences" width="355" height="360" loading="lazy" /></div>

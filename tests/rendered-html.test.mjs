@@ -42,6 +42,8 @@ test("server-renders the Angkorian-AI research site", async () => {
   assert.match(html, /href="https:\/\/github\.com\/back-kh"/);
   assert.match(html, /partners\/ecole-polytechnique\.webp/);
   assert.match(html, /partners\/unesco-twas\.webp/);
+  assert.match(html, /research\/angkorian-ai-reading-stone\.webp/);
+  assert.doesNotMatch(html, /research\/ksi-domain-gap\.jpg/);
   assert.ok(
     html.indexOf("partners/ecole-polytechnique.webp") < html.indexOf("partners/nerc-slip.webp"),
     "partner logos are rendered newest-first",

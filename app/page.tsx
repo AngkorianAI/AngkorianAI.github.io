@@ -488,8 +488,14 @@ export default function Home() {
       </section>
 
       <section className="contact-section" id="contact">
-        <div className="contact-stone" aria-hidden="true">
-          <img src="/research/ksi-domain-gap.jpg" alt="" width="2723" height="737" loading="lazy" />
+        <div className="contact-stone">
+          <img
+            src="/research/angkorian-ai-reading-stone.webp"
+            alt="Angkorian–AI — Reading stone. Preserving knowledge."
+            width="1731"
+            height="909"
+            loading="lazy"
+          />
         </div>
         <div className="contact-copy">
           <p className="eyebrow light">Collaboration</p>

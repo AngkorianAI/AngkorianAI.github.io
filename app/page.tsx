@@ -197,7 +197,7 @@ export default function Home() {
             <p className="section-note">Conference proceedings · 2026</p>
           </div>
           <div className="publication-intro">
-            <h2>Peer-reviewed publications.</h2>
+            <h2>Publications</h2>
             <p>
               Two complementary studies establish the project’s research
               agenda across historical document analysis and visual condition

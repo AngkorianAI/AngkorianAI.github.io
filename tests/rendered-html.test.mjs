@@ -35,6 +35,8 @@ test("server-renders the Angkorian-AI research site", async () => {
   assert.match(html, /Angkorian-HeritageObj: AI-Assisted Visual Condition/);
   assert.match(html, /ICDAR 2026 \(Vienna, Austria\)/);
   assert.match(html, /ICPR 2026 \(Lyon, France\)/);
+  assert.match(html, /<h2>Publications<\/h2>/);
+  assert.doesNotMatch(html, /Peer-reviewed publications\./);
   assert.match(html, /GitHub repository/);
   assert.doesNotMatch(html, /Led by Dr\. Nimol Thuon\./);
   assert.doesNotMatch(html, /Research at the intersection of artificial intelligence/);

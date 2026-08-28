@@ -58,6 +58,7 @@ test("server-renders the Angkorian-AI research site", async () => {
   );
   assert.match(html, /brand\/angkorian-ai-logo\.webp/);
   assert.match(html, /href="https:\/\/github\.com\/AngkorianAI"/);
+  assert.doesNotMatch(html, /href="https:\/\/github\.com\/AngkorianAI\/AngkorianAI\.github\.io"/);
   assert.match(html, /href="https:\/\/angkorianai\.github\.io\/"/);
   assert.match(html, /href="https:\/\/www\.facebook\.com\/profile\.php\?id=61590588425221"/);
   assert.ok(

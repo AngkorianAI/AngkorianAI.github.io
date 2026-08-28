@@ -2,7 +2,7 @@ const springerUrl =
   "https://link.springer.com/chapter/10.1007/978-3-032-36039-7_23";
 const heritageUrl =
   "https://www.researchgate.net/publication/413569705_Angkorian-HeritageObj_AI-Assisted_Visual_Condition_Assessment_of_Khmer_Stone_Heritage_Objects";
-const githubRepositoryUrl = "https://github.com/AngkorianAI/AngkorianAI.github.io";
+const githubRepositoryUrl = "https://github.com/AngkorianAI";
 const githubOrganizationUrl = "https://github.com/AngkorianAI";
 const projectWebsiteUrl = "https://angkorianai.github.io/";
 const facebookUrl = "https://www.facebook.com/profile.php?id=61590588425221";

@@ -422,14 +422,6 @@ export default function Home() {
           <p className="section-note">Applied AI · Historical analysis · Low-resource languages</p>
         </div>
         <div className="leadership-layout">
-          <div className="leadership-heading">
-            <p className="leadership-label">Project lead</p>
-            <h2>Led by Dr. Nimol Thuon.</h2>
-            <p>
-              Research at the intersection of artificial intelligence,
-              historical documents, writing systems, and cultural heritage.
-            </p>
-          </div>
           <article className="lead-profile">
             <div className="lead-identity">
               <a

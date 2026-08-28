@@ -660,7 +660,6 @@ figure {
 .benchmark-copy h2,
 .method-title h2,
 .evidence-heading h2,
-.leadership-heading h2,
 .contact-copy h2 {
   font-family: var(--serif);
   font-size: clamp(46px, 5vw, 78px);
@@ -1187,32 +1186,13 @@ figure {
 
 .leadership-layout {
   display: grid;
-  grid-template-columns: minmax(320px, 0.72fr) minmax(0, 1.28fr);
-  gap: 9vw;
+  grid-template-columns: minmax(0, 1fr);
   padding-top: 66px;
 }
 
-.leadership-label {
-  color: var(--red);
-  font-size: 9px;
-  font-weight: 750;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-}
-
-.leadership-heading h2 {
-  margin-top: 22px;
-}
-
-.leadership-heading > p:last-child {
-  max-width: 570px;
-  margin-top: 28px;
-  color: var(--ink-soft);
-  font-size: 16px;
-  line-height: 1.7;
-}
-
 .lead-profile {
+  width: min(100%, 940px);
+  margin-left: auto;
   align-self: start;
   padding: 38px 0 0;
   border-top: 2px solid var(--ink);
@@ -1738,11 +1718,10 @@ footer {
 
   .research-heading h2,
   .publication-intro h2,
-  .benchmark-copy h2,
-  .method-title h2,
-  .evidence-heading h2,
-  .leadership-heading h2,
-  .contact-copy h2 {
+    .benchmark-copy h2,
+    .method-title h2,
+    .evidence-heading h2,
+    .contact-copy h2 {
     font-size: clamp(42px, 13vw, 64px);
   }
 

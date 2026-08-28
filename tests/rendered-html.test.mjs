@@ -36,7 +36,9 @@ test("server-renders the Angkorian-AI research site", async () => {
   assert.match(html, /ICDAR 2026 \(Vienna, Austria\)/);
   assert.match(html, /ICPR 2026 \(Lyon, France\)/);
   assert.match(html, /GitHub repository/);
-  assert.match(html, /Led by Dr\. Nimol Thuon\./);
+  assert.doesNotMatch(html, /Led by Dr\. Nimol Thuon\./);
+  assert.doesNotMatch(html, /Research at the intersection of artificial intelligence/);
+  assert.doesNotMatch(html, /class="leadership-heading"/);
   assert.match(html, /more than a decade/);
   assert.match(html, /profile\/nimol-thuon\.jpg/);
   assert.match(html, /href="https:\/\/github\.com\/back-kh"/);

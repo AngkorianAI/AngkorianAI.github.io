@@ -42,6 +42,10 @@ test("server-renders the Angkorian-AI research site", async () => {
   assert.match(html, /Nimol Thuon, PhD/);
   assert.match(html, /Dr\. Nimol Thuon is a research scientist/);
   assert.match(html, /more than a decade/);
+  assert.match(html, /multi-script historical manuscripts/);
+  assert.match(html, /broad range of low-resource languages/);
+  assert.doesNotMatch(html, /palm-leaf manuscripts/);
+  assert.doesNotMatch(html, /low-resource Asian languages/);
   assert.match(html, /profile\/nimol-thuon\.jpg/);
   assert.match(html, /href="https:\/\/github\.com\/back-kh"/);
   assert.match(html, /partners\/ecole-polytechnique\.webp/);

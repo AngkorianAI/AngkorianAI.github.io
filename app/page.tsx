@@ -450,9 +450,9 @@ export default function Home() {
             <p className="lead-bio">
               Dr. Nimol Thuon is a research scientist specializing in applied
               AI for historical analysis and low-resource languages. For more
-              than a decade, his research has examined multi-script palm-leaf
+              than a decade, his research has examined multi-script historical
               manuscripts across South and Southeast Asia, covering 8–10
-              writing systems and a broad range of low-resource Asian languages.
+              writing systems and a broad range of low-resource languages.
               He now leads Angkorian–AI, advancing computational analysis of
               Khmer stone inscriptions and heritage objects for preservation,
               documentation, and long-term cultural research.

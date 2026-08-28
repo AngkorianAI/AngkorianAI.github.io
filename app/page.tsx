@@ -33,7 +33,7 @@ export default function Home() {
           <a href="#research">Research</a>
           <a href="#publications">Publications</a>
           <a href="#benchmark">Benchmark</a>
-          <a href="#people">People</a>
+          <a href="#people">About</a>
         </nav>
 
         <div className="header-actions">
@@ -51,7 +51,7 @@ export default function Home() {
             <a href="#research">Research</a>
             <a href="#publications">Publications</a>
             <a href="#benchmark">Benchmark</a>
-            <a href="#people">People</a>
+            <a href="#people">About</a>
             <a href={githubOrganizationUrl} target="_blank" rel="noreferrer">GitHub ↗</a>
             <a href="mailto:nimol.thn@gmail.com">Collaborate</a>
           </nav>

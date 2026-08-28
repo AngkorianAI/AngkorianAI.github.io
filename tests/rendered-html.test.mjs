@@ -68,6 +68,8 @@ test("server-renders the Angkorian-AI research site", async () => {
   assert.doesNotMatch(html, /class="team-list"/);
   assert.match(html, />3,493</);
   assert.match(html, /href="#publications"/);
+  assert.match(html, /href="#people">About<\/a>/);
+  assert.doesNotMatch(html, /href="#people">People<\/a>/);
   assert.match(html, /og\.png/);
 });
 

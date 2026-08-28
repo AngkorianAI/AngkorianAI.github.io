@@ -46,6 +46,10 @@ test("server-renders the Angkorian-AI research site", async () => {
   assert.match(html, /partners\/unesco-twas\.webp/);
   assert.match(html, /research\/angkorian-ai-reading-stone\.webp/);
   assert.doesNotMatch(html, /research\/ksi-domain-gap\.jpg/);
+  assert.match(html, /brand\/angkorian-ai-logo\.webp/);
+  assert.match(html, /href="https:\/\/github\.com\/AngkorianAI"/);
+  assert.match(html, /href="https:\/\/angkorianai\.github\.io\/"/);
+  assert.match(html, /href="https:\/\/www\.facebook\.com\/profile\.php\?id=61590588425221"/);
   assert.ok(
     html.indexOf("partners/ecole-polytechnique.webp") < html.indexOf("partners/nerc-slip.webp"),
     "partner logos are rendered newest-first",
@@ -64,6 +68,7 @@ test("removes starter-only metadata and dependencies", async () => {
   ]);
 
   assert.doesNotMatch(page, /SkeletonPreview|codex-preview/);
+  assert.equal((page.match(/brand\/angkorian-ai-logo\.webp/g) ?? []).length, 2);
   assert.doesNotMatch(layout, /Starter Project|codex-preview/);
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
   assert.match(layout, /summary_large_image/);

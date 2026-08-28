@@ -2,7 +2,10 @@ const springerUrl =
   "https://link.springer.com/chapter/10.1007/978-3-032-36039-7_23";
 const heritageUrl =
   "https://www.researchgate.net/publication/413569705_Angkorian-HeritageObj_AI-Assisted_Visual_Condition_Assessment_of_Khmer_Stone_Heritage_Objects";
-const githubUrl = "https://github.com/AngkorianAI/AngkorianAI.github.io";
+const githubRepositoryUrl = "https://github.com/AngkorianAI/AngkorianAI.github.io";
+const githubOrganizationUrl = "https://github.com/AngkorianAI";
+const projectWebsiteUrl = "https://angkorianai.github.io/";
+const facebookUrl = "https://www.facebook.com/profile.php?id=61590588425221";
 
 const metrics = [
   ["230", "full inscription images"],
@@ -18,7 +21,7 @@ export default function Home() {
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Angkorian-AI home">
           <span className="brand-seal" aria-hidden="true">
-            A
+            <img src="/brand/angkorian-ai-logo.webp" alt="" width="520" height="520" />
           </span>
           <span className="brand-type">
             <strong>Angkorian–AI</strong>
@@ -34,7 +37,7 @@ export default function Home() {
         </nav>
 
         <div className="header-actions">
-          <a className="header-github" href={githubUrl} target="_blank" rel="noreferrer">
+          <a className="header-github" href={githubOrganizationUrl} target="_blank" rel="noreferrer">
             GitHub <span aria-hidden="true">↗</span>
           </a>
           <a className="header-cta" href="mailto:nimol.thn@gmail.com">
@@ -49,7 +52,7 @@ export default function Home() {
             <a href="#publications">Publications</a>
             <a href="#benchmark">Benchmark</a>
             <a href="#people">People</a>
-            <a href={githubUrl} target="_blank" rel="noreferrer">GitHub ↗</a>
+            <a href={githubOrganizationUrl} target="_blank" rel="noreferrer">GitHub ↗</a>
             <a href="mailto:nimol.thn@gmail.com">Collaborate</a>
           </nav>
         </details>
@@ -76,7 +79,7 @@ export default function Home() {
             <a className="button button-outline" href={heritageUrl} target="_blank" rel="noreferrer">
               ICPR 2026 paper <span aria-hidden="true">↗</span>
             </a>
-            <a className="text-link" href={githubUrl} target="_blank" rel="noreferrer">
+            <a className="text-link" href={githubRepositoryUrl} target="_blank" rel="noreferrer">
               GitHub repository <span aria-hidden="true">↗</span>
             </a>
           </div>
@@ -105,7 +108,7 @@ export default function Home() {
               <a href={heritageUrl} target="_blank" rel="noreferrer">Open paper <span aria-hidden="true">↗</span></a>
             </div>
           </article>
-          <a className="register-github" href={githubUrl} target="_blank" rel="noreferrer">
+          <a className="register-github" href={githubRepositoryUrl} target="_blank" rel="noreferrer">
             View Angkorian–AI on GitHub <span aria-hidden="true">↗</span>
           </a>
         </aside>
@@ -230,7 +233,7 @@ export default function Home() {
                   <a className="button button-dark" href={springerUrl} target="_blank" rel="noreferrer">
                     Read ICDAR paper <span aria-hidden="true">↗</span>
                   </a>
-                  <a className="button button-outline" href={githubUrl} target="_blank" rel="noreferrer">
+                  <a className="button button-outline" href={githubRepositoryUrl} target="_blank" rel="noreferrer">
                     GitHub <span aria-hidden="true">↗</span>
                   </a>
                 </div>
@@ -273,7 +276,7 @@ export default function Home() {
                   <a className="button button-dark" href={heritageUrl} target="_blank" rel="noreferrer">
                     Read ICPR paper <span aria-hidden="true">↗</span>
                   </a>
-                  <a className="button button-outline" href={githubUrl} target="_blank" rel="noreferrer">
+                  <a className="button button-outline" href={githubRepositoryUrl} target="_blank" rel="noreferrer">
                     GitHub <span aria-hidden="true">↗</span>
                   </a>
                 </div>
@@ -506,18 +509,28 @@ export default function Home() {
       <footer>
         <div className="footer-main">
           <a className="brand footer-brand" href="#top">
-            <span className="brand-seal" aria-hidden="true">A</span>
+            <span className="brand-seal" aria-hidden="true">
+              <img src="/brand/angkorian-ai-logo.webp" alt="" width="520" height="520" loading="lazy" />
+            </span>
             <span className="brand-type"><strong>Angkorian–AI</strong><small>Khmer Heritage Intelligence</small></span>
           </a>
           <p>
             Deep learning and computer vision for the preservation and
             computational analysis of Khmer stone heritage.
           </p>
-          <nav aria-label="External links">
-            <a href={springerUrl} target="_blank" rel="noreferrer">Springer ↗</a>
-            <a href={heritageUrl} target="_blank" rel="noreferrer">ResearchGate ↗</a>
-            <a href={githubUrl} target="_blank" rel="noreferrer">GitHub ↗</a>
-          </nav>
+          <div className="footer-link-groups">
+            <nav aria-label="Research profiles">
+              <span>Research</span>
+              <a href={springerUrl} target="_blank" rel="noreferrer">Springer ↗</a>
+              <a href={heritageUrl} target="_blank" rel="noreferrer">ResearchGate ↗</a>
+            </nav>
+            <nav aria-label="Social media and project links">
+              <span>Connect</span>
+              <a href={projectWebsiteUrl} target="_blank" rel="noreferrer">Website ↗</a>
+              <a href={githubOrganizationUrl} target="_blank" rel="noreferrer">GitHub ↗</a>
+              <a href={facebookUrl} target="_blank" rel="noreferrer">Facebook ↗</a>
+            </nav>
+          </div>
         </div>
         <div className="footer-bottom">
           <span>© 2026 Angkorian–AI</span>

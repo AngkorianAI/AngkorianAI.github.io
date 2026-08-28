@@ -40,7 +40,12 @@ test("server-renders the Angkorian-AI research site", async () => {
   assert.match(html, /more than a decade/);
   assert.match(html, /profile\/nimol-thuon\.jpg/);
   assert.match(html, /href="https:\/\/github\.com\/back-kh"/);
+  assert.match(html, /partners\/ecole-polytechnique\.webp/);
   assert.match(html, /partners\/unesco-twas\.webp/);
+  assert.ok(
+    html.indexOf("partners/ecole-polytechnique.webp") < html.indexOf("partners/nerc-slip.webp"),
+    "partner logos are rendered newest-first",
+  );
   assert.doesNotMatch(html, /class="team-list"/);
   assert.match(html, />3,493</);
   assert.match(html, /href="#publications"/);

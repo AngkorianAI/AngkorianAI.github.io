@@ -2,8 +2,10 @@ const springerUrl =
   "https://link.springer.com/chapter/10.1007/978-3-032-36039-7_23";
 const heritageUrl =
   "https://www.researchgate.net/publication/413569705_Angkorian-HeritageObj_AI-Assisted_Visual_Condition_Assessment_of_Khmer_Stone_Heritage_Objects";
-const githubRepositoryUrl = "https://github.com/AngkorianAI";
+const githubRepositoryUrl = "https://github.com/back-kh/Angkorian-KSI";
 const githubOrganizationUrl = "https://github.com/AngkorianAI";
+const huggingFaceDatasetUrl =
+  "https://huggingface.co/datasets/Backkh/Angkorian-KSI-Small";
 const projectWebsiteUrl = "https://angkorianai.github.io/";
 const facebookUrl = "https://www.facebook.com/profile.php?id=61590588425221";
 
@@ -318,6 +320,60 @@ export default function Home() {
                 <span>{label}</span>
               </div>
             ))}
+          </div>
+
+          <div className="benchmark-release" aria-labelledby="ksi-small-title">
+            <div className="benchmark-release-heading">
+              <div>
+                <p className="eyebrow">Public benchmark release</p>
+                <h3 id="ksi-small-title">KSI-B-Small</h3>
+              </div>
+              <p>
+                A limited public subset for format inspection, pipeline
+                verification, and preliminary stone-inscription binarization
+                evaluation.
+              </p>
+            </div>
+
+            <div className="dataset-table-wrap">
+              <table className="dataset-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Resource</th>
+                    <th scope="col">Task</th>
+                    <th scope="col">Split</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Links</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong>KSI-B-Small</strong>
+                      <span>Angkorian-KSI public sample</span>
+                    </td>
+                    <td>Khmer stone-inscription binarization</td>
+                    <td>10 train / 5 test images</td>
+                    <td><span className="release-status">Public</span></td>
+                    <td>
+                      <div className="dataset-links">
+                        <a href={huggingFaceDatasetUrl} target="_blank" rel="noreferrer">
+                          Hugging Face <span aria-hidden="true">↗</span>
+                        </a>
+                        <a href={githubRepositoryUrl} target="_blank" rel="noreferrer">
+                          GitHub <span aria-hidden="true">↗</span>
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p className="benchmark-release-note">
+              The complete Angkorian-KSI benchmark remains restricted to
+              approved, non-commercial cultural-heritage research.
+            </p>
           </div>
 
           <figure className="benchmark-figure">

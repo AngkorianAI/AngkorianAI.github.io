@@ -1049,6 +1049,114 @@ figure {
   text-transform: uppercase;
 }
 
+.benchmark-release {
+  grid-column: 1 / -1;
+  border-top: 1px solid rgba(255, 253, 248, 0.34);
+  border-bottom: 1px solid rgba(255, 253, 248, 0.34);
+  padding-block: 36px;
+}
+
+.benchmark-release-heading {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.7fr) minmax(0, 1.3fr);
+  gap: 42px;
+  align-items: end;
+  margin-bottom: 28px;
+}
+
+.benchmark-release-heading .eyebrow {
+  color: #efb4ad;
+}
+
+.benchmark-release-heading h3 {
+  margin-top: 8px;
+  font-family: var(--serif);
+  font-size: clamp(32px, 3.4vw, 48px);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1;
+}
+
+.benchmark-release-heading > p,
+.benchmark-release-note {
+  color: rgba(255, 253, 248, 0.72);
+}
+
+.dataset-table-wrap {
+  overflow-x: auto;
+  border: 1px solid rgba(255, 253, 248, 0.28);
+}
+
+.dataset-table {
+  width: 100%;
+  min-width: 860px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.dataset-table th {
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255, 253, 248, 0.28);
+  color: rgba(255, 253, 248, 0.62);
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.dataset-table td {
+  padding: 18px 16px;
+  border-right: 1px solid rgba(255, 253, 248, 0.18);
+  vertical-align: middle;
+  font-size: 13px;
+}
+
+.dataset-table td:last-child {
+  border-right: 0;
+}
+
+.dataset-table td:first-child strong,
+.dataset-table td:first-child span {
+  display: block;
+}
+
+.dataset-table td:first-child span {
+  margin-top: 3px;
+  color: rgba(255, 253, 248, 0.62);
+  font-size: 11px;
+}
+
+.release-status {
+  display: inline-flex;
+  padding: 5px 9px;
+  border: 1px solid rgba(255, 253, 248, 0.42);
+  border-radius: 999px;
+  color: #f8d5cf;
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.dataset-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+}
+
+.dataset-links a {
+  border-bottom: 1px solid rgba(255, 253, 248, 0.5);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.benchmark-release-note {
+  margin-top: 16px;
+  font-size: 12px;
+}
+
 .benchmark-figure {
   grid-column: 1 / -1;
   margin-top: 8px;
@@ -1841,6 +1949,11 @@ footer {
 
   .benchmark-shell {
     gap: 54px;
+  }
+
+  .benchmark-release-heading {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 
   .metric {
